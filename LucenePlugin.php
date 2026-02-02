@@ -695,7 +695,7 @@ class LucenePlugin extends GenericPlugin {
 		$acceptedValues = array_keys($this->_getRankingBoostOptions());
 		$form =& $params[0];
 		$form->addCheck(
-			new FormValidatorInSet(
+			new \PKP\form\validation\FormValidatorInSet(
 				$form, 'rankingBoostOption', FORM_VALIDATOR_REQUIRED_VALUE,
 				'plugins.generic.lucene.sectionForm.rankingBoostInvalid',
 				$acceptedValues
